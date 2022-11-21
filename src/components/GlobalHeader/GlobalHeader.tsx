@@ -1,7 +1,8 @@
 import React from "react";
+import { CiSearch } from "react-icons/ci";
 import StyledGlobalHeader from "./GlobalHeader.styles";
 
-const GlobalHeader = () => {
+const GlobalHeader = ({ setSearch }: any) => {
   return (
     <StyledGlobalHeader>
       <div className="header-left">
@@ -9,7 +10,19 @@ const GlobalHeader = () => {
           <img src="sky.png" alt="sky-logo" className="header-sky-logo" />
           <p className="sky-text">Music</p>
         </div>
-        <input type="search" placeholder="Search" className="header-search" />
+        <div className="search">
+          <CiSearch />
+          <input
+            type="search"
+            placeholder="Search Artists, Songs, Albums"
+            className="header-search"
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
+      </div>
+      <div className="header-right">
+        <div className="sky-plus">Get SkyPlus +</div>
+        <div className="sky-plus">Login / Signup</div>
       </div>
     </StyledGlobalHeader>
   );
