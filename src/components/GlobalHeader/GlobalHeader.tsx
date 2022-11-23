@@ -5,7 +5,7 @@ import StyledGlobalHeader from "./GlobalHeader.styles";
 const GlobalHeader = ({ setSearch }:
   React.Dispatch<React.SetStateAction<string>> | string | any) => {
   return (
-    <StyledGlobalHeader>
+    <StyledGlobalHeader data-testid="global-header">
       <div className="header-left">
         <div className="sky-logo">
           <img src="sky.png" alt="sky-logo" className="header-sky-logo" />

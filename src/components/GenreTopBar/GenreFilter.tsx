@@ -33,7 +33,7 @@ const GenreFilter = ({ genre, setData }: any) => {
   };
 
   return (
-    <StyledCustomSwiper>
+    <StyledCustomSwiper data-testid="genre-filter">
       <Swiper
         navigation
         slidesPerView={window.innerWidth < 900 ? 4 : 8}

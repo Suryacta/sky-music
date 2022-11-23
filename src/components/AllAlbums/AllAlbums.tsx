@@ -26,7 +26,7 @@ const AllAlbums = ({ search }: React.Dispatch<React.SetStateAction<string>> | st
     <>
       {loading && <Loader loading={loading} />}
       {!loading && (
-        <StyledAllAlbums>
+        <StyledAllAlbums data-testid="album-content">
           <GenreFilter genre={album} setData={setData} />
           <div className="albums">
             {data?.slice(0, showMore).map((entry: {
@@ -36,6 +36,11 @@ const AllAlbums = ({ search }: React.Dispatch<React.SetStateAction<string>> | st
               title: {
                 label: string,
               },
+              link:{
+                attributes:{
+                  href: string,
+                }
+              }
             }) => {
               return (
                 <div className="album-entry">
@@ -44,7 +49,7 @@ const AllAlbums = ({ search }: React.Dispatch<React.SetStateAction<string>> | st
                     alt="album-thumbnail"
                     className="album-thumbnail"
                   />
-                  <p>{entry.title.label}</p>
+                  <a href={entry.link.attributes.href} target="_blank" rel="noreferrer">{entry.title.label}</a>
                 </div>
               );
             })}
@@ -52,7 +57,7 @@ const AllAlbums = ({ search }: React.Dispatch<React.SetStateAction<string>> | st
         </StyledAllAlbums>
       )}
       {showMore <= data?.length && (
-        <StyledPaginateButton>
+        <StyledPaginateButton data-testid="pagination">
           <button
             onClick={() => {
               setShowMore((prevValue) => prevValue + 8);

@@ -13,6 +13,11 @@ const StyledGlobalHeader = styled.div`
     align-items: center;
     gap: 4rem;
     width: 45%;
+    @media screen and (max-width: 800px){
+      display: flex;
+    align-items: center;
+    gap: 1rem;
+    }
   }
   .sky-logo {
     display: flex;
@@ -29,6 +34,11 @@ const StyledGlobalHeader = styled.div`
     height: 5rem;
     width: 5rem;
     object-fit: contain;
+    @media screen and (max-width: 600px){
+      height: 3rem;
+    width: 3rem;
+    object-fit: contain;
+    }
   }
   .header-search {
     outline: none;
@@ -36,6 +46,12 @@ const StyledGlobalHeader = styled.div`
     height: 2rem;
     width: 18rem;
     border-radius: 1rem;
+    @media screen and (max-width: 800px){
+        width: 12rem;
+    }
+    @media screen and (max-width: 480px){
+        width: 6rem;
+    }
   }
   .search {
     display: flex;
@@ -50,6 +66,9 @@ const StyledGlobalHeader = styled.div`
     display: flex;
     align-items: center;
     gap: 3rem;
+    @media screen and (max-width: 800px){
+        display: none;
+    }
   }
   .sky-plus {
     font-family: sans-serif;
