@@ -6,7 +6,7 @@ import Home from "./pages/Home/Home";
 import { fetchAlbumData } from "./store/album-slice";
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState<React.Dispatch<React.SetStateAction<string>> | string>("");
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAlbumData());

@@ -2,7 +2,8 @@ import React from "react";
 import { CiSearch } from "react-icons/ci";
 import StyledGlobalHeader from "./GlobalHeader.styles";
 
-const GlobalHeader = ({ setSearch }: any) => {
+const GlobalHeader = ({ setSearch }:
+  React.Dispatch<React.SetStateAction<string>> | string | any) => {
   return (
     <StyledGlobalHeader>
       <div className="header-left">

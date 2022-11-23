@@ -1,31 +1,53 @@
 import styled from "styled-components";
+import Colors from "../../shared/utils/Constants/Theme";
 
 const StyledGenreFilter = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-.genre-content{
-    width: 14rem;
-    display: flex;
-    justify-content: center;
-}
-p{
+.genre-button{
+    padding: 1rem;
+    width: 100%;
     font-weight: 600;
     font-family: sans-serif;
-    border-bottom: solid 1px #EE354D;
-    padding-bottom: 0.5rem;
-}
-.genre-options{
-    padding: 0.7rem;
-    width: 100%;
     border: none;
-    background-color: #fff;
-    cursor: pointer;
-    &:hover{
-        background-color: #f0f8ff;
-        transition: all 0.2s ease-in-out;
+    border-radius: 2rem;
+    background-color: transparent;
+    cursor: pointer; 
+    border: solid 0.5px ${Colors.mediumGrey};
+    @media screen and (max-width: 900px){
+        width: 80%;
+        font-size: 0.5rem;
+        white-space: pre-wrap;
     }
+}
+
+`;
+const StyledCustomSwiper = styled.div`
+.swiper-button-prev {
+    background-color: ${Colors.carouselGrey};
+    width: 45px;
+    border-radius: 40px;
+}
+
+.swiper-button-next {
+    background-color: ${Colors.carouselGrey};
+    width: 45px;
+    border-radius: 40px;
+}
+.swiper-button-next:after {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: ${Colors.mediumGrey};
+ 
+}
+.swiper-button-prev:after {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: ${Colors.mediumGrey};
+ 
 }
 `;
 
-export default StyledGenreFilter;
+export { StyledGenreFilter, StyledCustomSwiper };

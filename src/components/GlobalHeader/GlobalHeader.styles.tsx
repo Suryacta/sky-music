@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Colors from "../../shared/utils/Constants/Theme";
 
 const StyledGlobalHeader = styled.div`
   background-color: #f7f7f7;
@@ -6,7 +7,7 @@ const StyledGlobalHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 4%;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(111, 103, 100, 0.2) 0px 7px 29px 0px;
   .header-left {
     display: flex;
     align-items: center;
@@ -22,7 +23,7 @@ const StyledGlobalHeader = styled.div`
     font-family: sans-serif;
     font-size: 24px;
     font-weight: 600;
-    color: #ee354d;
+    color: ${Colors.appleRed};
   }
   .header-sky-logo {
     height: 5rem;
@@ -40,8 +41,8 @@ const StyledGlobalHeader = styled.div`
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: #fff;
-    border: solid 0.5px #a9a9a9;
+    background-color: ${Colors.lightSurface};
+    border: solid 0.5px ${Colors.mediumGrey};
     border-radius: 2rem;
     padding: 0.2rem;
   }
@@ -54,8 +55,8 @@ const StyledGlobalHeader = styled.div`
     font-family: sans-serif;
     font-size: 13px;
     font-weight: 600;
-    color: #ee354d;
-    border: solid 1px #ee354d;
+    color: ${Colors.appleRed};
+    border: solid 1px ${Colors.appleRed};
     border-radius: 2rem;
     padding: 0.6rem;
     cursor: pointer;
